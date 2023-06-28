@@ -3,7 +3,8 @@ import vue from "@vitejs/plugin-vue";
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
 import { presetUno, presetAttributify, presetIcons } from "unocss";
-import Unocss from "unocss/vite";
+// import Unocss from "unocss/vite";
+import Unocss from "./config/unocss";
 
 // https://vitejs.dev/config/
 const rollupOptions = {
@@ -12,6 +13,7 @@ const rollupOptions = {
   output: {
     //解决which may not be what you want. Use `output.exports: "named"` to disable this warning
     exports: 'named' as 'named',
+    assetFileNames: `assets/[name].css`,
     globals: {
       vue: "Vue",
     },
@@ -24,13 +26,18 @@ export default defineConfig({
     // JSX插件
     vueJsx({}),
      // 添加UnoCSS插件
-     Unocss({
-      presets: [presetUno(), presetAttributify(), presetIcons()],
-  })
+    //  Unocss({
+    //   presets: [presetUno(), presetAttributify(), presetIcons()],
+    //  }),
+
+    //将unocss配置抽出来
+    Unocss(),
+     
   ],
   build: {
     rollupOptions,
-    minify:false,
+    minify: false,
+    cssCodeSplit: true,
     lib: {
       entry: "./src/entry.ts",
       name: "SmartyUI",
