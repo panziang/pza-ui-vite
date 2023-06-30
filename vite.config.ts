@@ -28,6 +28,7 @@ export default defineConfig({
   plugins: [vue(),
     // JSX插件
     vueJsx({}),
+
      // 添加UnoCSS插件
     //  Unocss({
     //   presets: [presetUno(), presetAttributify(), presetIcons()],
@@ -39,7 +40,9 @@ export default defineConfig({
   ],
   build: {
     rollupOptions,
-    minify: false,
+    minify: 'terser', // boolean | 'terser' | 'esbuild'
+    sourcemap: true, // 输出单独 source文件
+    reportCompressedSize: true,  // 生成压缩大小报告
     cssCodeSplit: true,
     lib: {
       entry: "./src/entry.ts",
