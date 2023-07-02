@@ -6,7 +6,7 @@ on:
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     name: "publish npm"
 
@@ -28,5 +28,4 @@ jobs:
           NPM_AUTH_TOKEN: ${{ secrets.npm_auth_token }} # 跟前面步骤中的 NPM_AUTH_TOKEN 保持一致
         with:
           default_branch: "main"
-          dir: "."
           npm_args: "--unsafe-perm --allow-same-version"
