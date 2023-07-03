@@ -1,11 +1,11 @@
 /// <reference types="vitest" />   
 // 上面一行代码是增加一个类型定义声明，解决配置test报错
-import { defineConfig } from "vite";
+import { defineConfig,UserConfig  } from "vite";
 // import { defineConfig } from "vitest/config";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
-import { presetUno, presetAttributify, presetIcons } from "unocss";
+// import { presetUno, presetAttributify, presetIcons } from "unocss";
 // import Unocss from "unocss/vite";
 import Unocss from "./config/unocss";
 
@@ -23,7 +23,7 @@ const rollupOptions = {
   },
 };
 
-export default defineConfig({
+export const config ={
 
   plugins: [vue(),
     // JSX插件
@@ -51,6 +51,7 @@ export default defineConfig({
       // 导出模块格式
       formats: ["es", "umd","iife"],
     },
+    outDir: "./dist"
   },
   test: {
     // enable jest-like global test APIs
@@ -63,4 +64,6 @@ export default defineConfig({
     }
   }
 
-});
+};
+
+export default defineConfig(config as UserConfig)
