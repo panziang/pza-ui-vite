@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://pza-ui-vite.vercel.app/",
   "scripts": {
     "test": "vitest",
     "dev": "vite",
