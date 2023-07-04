@@ -1,9 +1,10 @@
 # pza-ui-vite
 基于 Vite 的组件库工程化实战
 
-<p align="center">
-    <a href="https://github.com/panziang/pza-ui-vite/actions/workflows/main.yml"><img src="https://github.com/panziang/pza-ui-vite/actions/workflows/main.yml/badge.svg?branch=main" alt="CI" style="max-width: 100%;"></a>
-</p>
+  <a href="https://github.com/panziang/pza-ui-vite/actions/workflows/main.yml"><img src="https://github.com/panziang/pza-ui-vite/actions/workflows/main.yml/badge.svg?branch=main" alt="CI" style="max-width: 100%;"></a>
+
+[![codecov](https://codecov.io/gh/panziang/pza-ui-vite/branch/main/graph/badge.svg?token=S73HFO5WK6)](https://codecov.io/gh/panziang/pza-ui-vite)
+
 
 ### Features
 
