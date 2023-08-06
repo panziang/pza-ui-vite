@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@commitlint/cli':
+        specifier: 17.0.2
+        version: registry.npmmirror.com/@commitlint/cli@17.0.2
+      '@commitlint/config-conventional':
+        specifier: 17.0.2
+        version: registry.npmmirror.com/@commitlint/config-conventional@17.0.2
       vite:
         specifier: 3.0.7
         version: registry.npmmirror.com/vite@3.0.7(terser@5.4.0)
