@@ -18,6 +18,28 @@
 - 基于Action CI 实现持续集成与交付
 
 ### INSTALL
-​```sh
-npm install pza-ui-vite
 ​```
+  npm install pza-ui-vite
+​```
+### Quick Start
+import Vue from 'vue'
+import PUI from 'pza-ui-vite'
+
+const App = {
+    template: `
+        <SButton/>
+    `,
+};
+
+createApp(App)
+    .use(PUI)
+    .mount("#app");
+### Browser Support
+Modern browsers and Internet Explorer 10+.
+
+## LICENSE
+
+[MIT](LICENSE)
+
+
+Copyright (c) 2023 - present Ziang Pan
